@@ -1,34 +1,47 @@
 body {
     font-family: "Playfair Display", serif;
-    font-size: 16px; /* Litt økt fontstørrelse */
+    font-size: 16px;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f8f8f8;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
 }
 
 #description {
-    font-size: 22px; /* Litt økt fontstørrelse */
+    font-size: 22px;
     max-width: 80%;
     margin: 0 auto;
     padding: 20px;
 }
 
 h1 {
-    font-size: 2.7em; /* Litt økt fontstørrelse */
+    font-size: 2.7em;
     margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 1.8em; /* Litt økt fontstørrelse */
+    font-size: 1.8em;
     margin-top: 60px;
 }
 
 .project-list {
-    margin-top: -20px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
     border-collapse: separate;
     border-spacing: 0;
-    width: 100%;
     position: relative;
+    margin-top: -20px;
 }
 
 .project-list::before,
@@ -70,12 +83,23 @@ h2 {
 
 .project-list th,
 .project-list td {
-    font-size: 18px; /* Litt økt fontstørrelse */
+    font-size: 18px;
     padding: 12px 8px;
     text-align: left;
     border: none;
     position: relative;
     background-color: transparent;
+}
+
+.project-list td:first-child {
+    width: 60%;
+    padding-left: calc((100vw - 80%) / 2 + 200px);
+}
+
+.project-list td:last-child {
+    width: 40%;
+    padding-right: calc((100vw - 80%) / 2);
+    white-space: nowrap;
 }
 
 .clickable-row {
@@ -94,32 +118,29 @@ h2 {
     z-index: -1;
 }
 
-/* Ensure the table takes full width */
-table {
-    width: 100vw;
-    max-width: 100%;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-/* Adjust column widths and alignment */
-.project-list td:first-child {
-    width: 60%; /* Juster til 50% for å gi mer plass til den andre kolonnen */
-    padding-left: calc((100vw - 68%) / 2);
-}
-
-.project-list td:last-child {
-    width: 50%; /* Økt bredde for siste kolonne for å unngå linjebryting */
-    padding-right: calc((100vw - 60%) / 2);
-    white-space: nowrap; /* Forhindrer linjebryting i cellene */
-}
-
 @media (max-width: 800px) {
-    .project-list td:first-child,
-    .project-list td:last-child {
-        padding-left: 20px;
-        padding-right: 20px;
+    #description {
+        max-width: 95%;
+        padding: 10px;
     }
+
+    .project-list td:first-child {
+        padding-left: calc((100vw - 95%) / 2 + 10px);
+    }
+
+    .project-list td:last-child {
+        padding-right: calc((100vw - 95%) / 2);
+    }
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+}
+
+a:hover {
+    color: #6c6868;
+    text-decoration: none;
+    border-bottom: 1px solid #6c6868;
 }

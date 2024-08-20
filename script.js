@@ -32,16 +32,19 @@ const projects = [
         title: "Fern Project",
         images: ["demoFern.gif"],
         paragraphs: [`
-        Det var viktig at BOM ble synkronisert riktig. Hvis brukeren gjorde en liten endring på et produkt, 
-        så skulle ikke hele BOM bli synkronisert på nytt. Det var også viktig at BOM ble synkronisert raskt, 
-        siden det kunne være mange komponenter i BOM. Jeg viser ikke til bilder eller videoer av Fern, 
+        Det var viktig at BOMen ble synkronisert riktig. Hvis brukeren gjorde en liten endring på et produkt, 
+        så skulle ikke hele BOMen bli synkronisert på nytt. Det var også viktig at BOM ble synkronisert raskt, 
+        siden det kunne være mange komponenter i BOMen. Jeg viser ikke til bilder eller videoer av Fern, 
         siden det er et proprietært program, men til høyre kan man se hvordan det så ut fra Fusion 360. 
         Det som er morsomt med denne oppgaven er at synkronisering av BOMer ble brukt som et eksempel på bruken 
         av algoritmer i pensumboka i Algoritmer og Datastrukturer på NTNU: 
         "Given a mechanical design in terms of a library of parts, where each part may include instances of other parts, 
         list the parts in order so that each part appears before any part that uses it." 
         Fra: "Introduction to Algorithms, Fourth Edition" by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein.
-    `]
+        `,
+        `Meste parten av jobben gikk ut på å bli kjent med fusion 360 APIet, slik at man fikk sendt den dataen man trengte. Og så var det
+        mye jobb i å bli kjent med den eksisterende kodebase til Fern, og lage metoder i APIet for å håndtere dataen som ble sendt fra Fusion 360.
+        Dette ble gjort med typescript, `]
     },
     {
         id: 3,
